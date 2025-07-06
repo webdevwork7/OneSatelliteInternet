@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "OneSatelliteInternet",
   description: "Find your perfect internet connection with the best deals online",
-  phone: "+1 (888) 970-1698",
-  phoneRaw: "+18889701698",
-  address: "123 Internet Avenue, Digital City, DC 10101",
-  email: "support@onesatelliteinternet.online",
+  phone: "+1 (888) 368-9983",
+  phoneRaw: "+18883689983",
+  address: "12 John F Kennedy Blvd, Somerset, NJ 08873, United States",
+  email: "support@onesatelliteinternet.site",
   socialLinks: {
     facebook: "https://facebook.com/onesatelliteinternet",
     twitter: "https://twitter.com/onesatelliteinternet",
