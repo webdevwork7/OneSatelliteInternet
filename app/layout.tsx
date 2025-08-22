@@ -39,6 +39,40 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
 
+        {/* Google Tag Loader (external script) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17312772339"
+          strategy="afterInteractive"
+          async
+        />
+        
+        {/* Google Tag Config (inline script) */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17312772339');
+          `}
+        </Script>
+
+       <Script id="google-conversion" strategy="afterInteractive">
+        {`
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17312772339/UgFdCNKnnIobEPPhr79A',
+              'event_callback': callback
+            });
+            return false;
+          }
+        `}
+       </Script>
+
         <Script id="trackwiser-analytics" strategy="afterInteractive">
       {`
         (function() {
