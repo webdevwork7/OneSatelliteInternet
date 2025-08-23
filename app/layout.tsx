@@ -45,6 +45,8 @@ export default function RootLayout({
           strategy="afterInteractive"
           async
         />
+
+      
         
         {/* Google Tag Config (inline script) */}
         <Script id="google-analytics" strategy="afterInteractive">
@@ -73,7 +75,15 @@ export default function RootLayout({
         `}
        </Script>
 
-        <Script id="trackwiser-analytics" strategy="afterInteractive">
+      <Script id="google-phone-conversion" strategy="afterInteractive">
+        {`
+          gtag('config', 'AW-17312772339/OPCWCK6jmIwbEPPhr79A', {
+            'phone_conversion_number': '+1 (888) 368-9983'
+          });
+        `}
+     </Script>
+
+      <Script id="trackwiser-analytics" strategy="afterInteractive">
       {`
         (function() {
           var trackingCode = 's1y9dxtwsgdt799673npa';
